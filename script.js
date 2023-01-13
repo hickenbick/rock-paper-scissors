@@ -1,3 +1,7 @@
+let computerScore = 0;
+let userScore = 0;
+let round = 1;
+
 // generating computer choice and returning "rock", "paper" or "scissor" randomly
 getComputerChoice = function() {
   randomNumber = Math.floor(Math.random() * 3)
@@ -21,41 +25,58 @@ getUserChoice = function() {
   }
 }
 
-// Function to play a new round
-function playRound(playerSelection, computerSelection) {
-    playerSelection = getUserChoice()
-    computerSelection = getComputerChoice()
-    result = "This round we have: " + playerSelection + " vs " + computerSelection;
-    console.log(result)
-    console.log(roundComparison(playerSelection, computerSelection));
-    return result
-}
-
-// Function to compare player vs computer and declare result
-roundComparison = function(user, computer) {
-  if (user === computer) {
-    return "this round is a tie!"
-  } else if (user === "rock" && computer === "paper") {
-    return "computer got this round!"
-  } else if (user === "rock" && computer === "scissor") {
-    return "user got this round!"
-  } else if (user === "paper" && computer === "rock") {
-    return "user got this round!"
-  } else if (user === "paper" && computer === "scissor") {
-    return "computer got this round!"
-  } else if (user === "scissor" && computer === "rock") {
-    return "computer got this round!"
-  } else if (user === "scissor" && computer === "rock") {
-    return "computer got this round!"
+// function containing all logic of the game and prints of what is happening
+function playRound(userChoice, computerChoice) {
+  userChoice = getUserChoice()
+  computerChoice = getComputerChoice()
+  console.log("This is round: " + round)
+  console.log("User choice: " + userChoice + " | " + "Computer choice: " + computerChoice)
+ 
+  if (userChoice === "rock" && computerChoice === "scissor" || 
+  userChoice === "paper" && computerChoice === "rock" ||
+  userChoice === "scissor" && computerChoice === "paper") {
+  console.log("This round user wins!")
+  userScore++
   }
-}
-
-let game = function() {
-  for (let i = 0; i < 5; i++) {
-    console.log(playRound().result)
+  if (userChoice === "rock" && computerChoice === "paper" || 
+  userChoice === "paper" && computerChoice === "scissor" ||
+  userChoice === "scissor" && computerChoice === "rock") {
+  console.log("This round computer wins!")
+  computerScore++
   }
+  if (userChoice === computerChoice){
+    console.log("This round is a tie!")
+  }
+  if (userChoice === undefined || userChoice === null) {
+    console.log("Try again!")
+    round--
+  }
+  round++
+  console.log("User score: " + userScore + " | " + "Computer score: " + computerScore)
+  console.log("---- || -----")
 }
 
+// function with loop for 5 rounds announcing winner at the end and making variables 0 again
+function game() {
+  for(i = 0; i < 5; i++) {
+    playRound();
+  }
+  if (userScore === computerScore) {
+    console.log("The game finish is a TIE!")
+  }
+  if (userScore > computerScore) {
+    console.log("USER wins the game!")
+  } 
+  if (userScore < computerScore) {
+    console.log("COMPUTER wins the game!")
+  } 
+  console.log("---- || -----")
+  round = 0
+  userScore = 0
+  computerScore = 0
+} 
+  
+// call for net game to start
 game()
 
 
