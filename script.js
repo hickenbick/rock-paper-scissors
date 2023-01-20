@@ -32,22 +32,26 @@ function playRound(userChoice, computerChoice) {
   console.log("This is round: " + round)
   console.log("User choice: " + userChoice + " | " + "Computer choice: " + computerChoice)
  
-  if (userChoice === "rock" && computerChoice === "scissor" || 
+  if (
+  userChoice === "rock" && computerChoice === "scissor" || 
   userChoice === "paper" && computerChoice === "rock" ||
   userChoice === "scissor" && computerChoice === "paper") {
   console.log("This round user wins!")
   userScore++
   }
-  if (userChoice === "rock" && computerChoice === "paper" || 
+  if (
+  userChoice === "rock" && computerChoice === "paper" || 
   userChoice === "paper" && computerChoice === "scissor" ||
   userChoice === "scissor" && computerChoice === "rock") {
   console.log("This round computer wins!")
   computerScore++
   }
-  if (userChoice === computerChoice){
+  if (
+    userChoice === computerChoice){
     console.log("This round is a tie!")
   }
-  if (userChoice === undefined || userChoice === null) {
+  if (
+    userChoice === undefined || userChoice === null) {
     console.log("Try again!")
     round--
   }
@@ -77,7 +81,7 @@ function game() {
 } 
   
 // call for net game to start
-game()
+// game()
 
 
 

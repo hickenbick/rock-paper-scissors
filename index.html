@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,55 @@
   <title>Rock Paper Scissors</title>
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
+  <!-- header -->
+  <header class="bg-header">
+    <div class="container">
+      <h1>Rock Paper Scissors</h1>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="bg-main">
+    <div class="container flex-container">
+
+      <div class="intro">
+        <h2>Choose your weapon</h2>
+        <h3>First to score 5 points wins the game</h3>
+      </div>
+
+      <div class="results-container">
+        <div class="choices-container">
+          <span class="user-choice icon">❔</span>
+          <span class="computer-choice icon">❔</span>
+        </div>
+        <div class="results">
+          <h3>Player: <span>0</span></h3>
+          <h3>Computer: <span>0</span></h3>
+        </div>
+      </div>
+
+      <div class="btns-container">
+        <span class="rock-btn icon btn">✊</span>
+        <span class="paper-btn icon btn">✋</span>
+        <span class="scissor-btn icon btn">✌</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="bg-footer">
+    <div class="container footer-flex">
+      <p>Made with ❤️ by Rodrigo Hickenbick</p>
+      <p>|</p>
+      <a href="https://github.com/hickenbick"><img src="./img/github-icon.svg" alt="Github icon" class="svg-footer"></a>
+      <a href="https://www.linkedin.com/in/rodrigo-hickenbick/"><img src="./img/linkedin-icon.svg" alt="Linkedin icon" class="svg-footer"></a>
+    </div>
+  </footer>
+
+
   <script src="./script.js"></script>
 </body>
+
 </html>

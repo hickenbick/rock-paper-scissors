@@ -1,0 +1,141 @@
+/* Hello and welcome! Thanks for reading my code. */
+
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;500;700&display=swap');
+
+/* colors */
+
+:root {
+  --primary-light: #ddd;
+  --primary-dark: #222831;
+  --secondary-dark: #393e46;
+  --secondary-dark-hover: #4a4f57;
+  --secondary-dark-active: #5b5f68;
+  --header: #000;
+  --primary-yellow: #fec63e;
+}
+
+/* general styles and resets */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* border: solid red 1px; */
+}
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.container {
+  max-width: 1440px;
+  padding: 0 32px;
+  margin: 0 auto;
+}
+
+/* header */
+
+.bg-header{
+  background-color: var(--header);
+  text-align: center;
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.bg-header h1 {
+  font-family: "Press Start 2p";
+  color: var(--primary-yellow);
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+/* main */
+
+.bg-main {
+  background-color: var(--primary-dark);
+  height: 100%;
+  color: var(--primary-light);
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.intro h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.intro h3 {
+  font-size: 18px;
+}
+
+.icon {
+  font-size: 64px;
+}
+
+.choices-container, 
+.btns-container,
+.results {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.choices-container {
+  margin-bottom: 16px;
+}
+
+.btn {
+  background-color: var(--secondary-dark);
+  padding: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--secondary-dark-hover);
+}
+ 
+
+
+
+
+/* footer */
+
+.bg-footer {
+  height: 75px;
+  background-color: var(--header);
+  color: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.svg-footer {
+  max-width: 24px;
+  color: var(--primary-light);
+}
+
+.bg-footer p, .bg-footer p {
+  display: inline-block;
+}
