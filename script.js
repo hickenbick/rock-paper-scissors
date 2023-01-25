@@ -114,7 +114,7 @@ function announceWinner() {
 playAgainBtn.addEventListener("click", () => {
   modal.classList.remove("fadein")
   introH2.textContent = "Choose your weapon"
-  introH3.textContent = `First to score 5 points wins the game`
+  introH3.textContent = `The best of 5 rounds wins`
   userIcon.textContent = "❔"
   computerIcon.textContent = "❔"
   userCounter.textContent = 0
