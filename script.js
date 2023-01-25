@@ -101,7 +101,7 @@ function announceWinner() {
   modal.classList.add("fadein")
   if (userScore > computerScore) {
     winnerText.textContent = `User wins the game!` 
-  } else if (userScore > computerScore) {
+  } else if (userScore < computerScore) {
     winnerText.textContent = `Computer wins the game!` 
   } else {
     winnerText.textContent = `The game was a tie!` 
